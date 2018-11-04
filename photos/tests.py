@@ -32,3 +32,8 @@ class LocationTestCase(TestCase):
 
     def tearDown(self):
         Location.objects.all().delete()
+
+    def test_save_location(self):
+        self.nyali.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
