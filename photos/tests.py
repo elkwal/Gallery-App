@@ -12,3 +12,8 @@ class CategoryTestCase(TestCase):
 
     def tearDown(self):
         Category.objects.all().delete()
+
+    def test_save_category(self):
+        self.food.save_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) > 0)
