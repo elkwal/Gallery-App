@@ -37,3 +37,8 @@ class LocationTestCase(TestCase):
         self.nyali.save_location()
         locations = Location.objects.all()
         self.assertTrue(len(locations) > 0)
+
+    def test_delete_location(self):
+        self.nyali.delete_location('Nyali')
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) == 0)
