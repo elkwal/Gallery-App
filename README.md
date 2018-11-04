@@ -44,9 +44,13 @@ To run this program
 ## Prerequisites
 You need the following to work on the project:
 `-Python version 3.6`
+
 `-Django 2.0`
+
 `-Pip`
+
 `-virtualenv`
+
 `-A text  Editor`
 ## Link to Live Website
 
