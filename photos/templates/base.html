@@ -9,8 +9,13 @@
     {% else %}
       <title>Art Gallery</title>
     {% endif %}
+
+    {% block styles %}
+      {% bootstrap_css %}
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
   </head>
   <body style="background-color:#F5F5F5;">
-
+    
   </body>
 </html>
