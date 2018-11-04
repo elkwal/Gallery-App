@@ -7,6 +7,7 @@ from django.views.generic import RedirectView
 urlpatterns=[
     url(r'^$',views.index,name='index'),
     url(r'^location/(\d+)',views.display_location,name='displayLocation'),
+    url(r'^search/',views.search_category,name='search_category'),
 ]
 
 if settings.DEBUG:
