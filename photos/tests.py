@@ -22,3 +22,13 @@ class CategoryTestCase(TestCase):
         self.food.delete_category('Food')
         categories = Category.objects.all()
         self.assertTrue(len(categories) == 0)
+
+class LocationTestCase(TestCase):
+    def setUp(self):
+        self.nyali = Location(name = 'Nyali')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nyali, Location))
+
+    def tearDown(self):
+        Location.objects.all().delete()
