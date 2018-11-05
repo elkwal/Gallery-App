@@ -25,13 +25,21 @@
               {{image.image_description}}
             </div>
             <div class="modal-footer">
-              <a href="" type="button" class="btn btn-default btn-md">Share</a>
+              <input class="form-control input-lg" type="text"  value="https://gallery-django.herokuapp.com{{image.image.url}}" id="{{image.id}}-url" >
+              <button class="btn btn-outline-info" onclick="copyUrl('{{image.id}}-url')">Copy</button>
             </div>
           </div>
         </div>
       </div>
 
     </div>
+    <script type="text/javascript">
+      function copyUrl(element){
+        var myVar = document.getElementById(element)
+        myVar.select();
+        document.execCommand('copy')
+      }
+    </script>
     {% empty %}
         <h3 class="text-center">There are No Images</h3>
     {% endfor %}
