@@ -54,7 +54,7 @@ You need the following to work on the project:
 
 `-A text  Editor`
 ## Link to Live Website
-
+https://gallery-django.herokuapp.com/
 
 ## Technologies Used
 * Django
