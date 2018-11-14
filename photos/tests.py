@@ -5,6 +5,7 @@ from .models import Image,Category,Location
 class CategoryTestCase(TestCase):
 
     def setUp(self):
+        
         self.food = Category(name = 'Food')
 
     def test_instance(self):
